@@ -7,9 +7,9 @@ const getShows = async (req, res, next) => {
 
     const offset = page * limit;
     const shows = await Show.find({})
-      .select(["-_embedded"])
       .skip(offset)
-      .sort({ createdAt: -1 })
+      .select(["-_embedded"])
+      // .sort({ createdAt: -1 })
       .limit(limit)
       .exec();
     res.json(shows);
