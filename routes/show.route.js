@@ -1,5 +1,5 @@
 const express = require("express");
-const { getShows, bulkAddShows, getShowById } = require("../controller/show.controller");
+const { getShows, bulkAddShows, getShowById } = require("../controllers/show.controller");
 
 const showRoute = express.Router();
 
